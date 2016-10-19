@@ -1,0 +1,184 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="pragma" content="no-cache">
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="content-type" content="text/html; charset=Shift_JIS" />
+  <meta http-equiv="content-style-type" content="text/css" />
+  <meta http-equiv="content-script-type" content="text/javascript" />
+  <script language="JavaScript"
+  src="./common/web-copy/js/jquery-1.7.2.min.js"
+  type="text/javascript"></script>
+  <script language="JavaScript" src="./dummy.js" type="text/javascript"></script>
+  <title>開発期間中のダミー画面(新リンクパラメータ)</title>
+  <link rel="stylesheet" href="./css/base.css"
+  type="text/css" />
+  <style type="text/css">
+th {
+    text-align: right;
+    font-size: 11px;
+    font-family: "meiryo";
+}
+
+td {
+    font-size: 11px;
+    font-family: "meiryo";
+}
+</style>
+    <script type="text/javascript">
+function actionLocal(){
+    document.getElementById('form').action = 'http://localhost:18080/customer/action/ssAA01/WAA0106Action/RWAA010606';
+}
+function actionDaken851(){
+    document.getElementById('form').action = 'http://s1307c00851-t1:18080/customer/action/ssAA01/WAA0106Action/RWAA010606';
+}
+function actionDaken852(){
+    document.getElementById('form').action = 'http://s1307c00852-t1:18080/customer/action/ssAA01/WAA0106Action/RWAA010606';
+}
+function actionNewSt(){
+    document.getElementById('form').action = 'https://c-web-test.cedyna.co.jp/st-customer/action/ssAA01/WAA0106Action/RWAA010606';
+}
+function actionNewSt2(){
+    document.getElementById('form').action = 'https://c-web-test.cedyna.co.jp/st2-customer/action/ssAA01/WAA0106Action/RWAA010606';
+}
+function actionPreHmbn(){
+    document.getElementById('form').action = 'https://c-web-test.cedyna.co.jp/customer/action/ssAA01/WAA0106Action/RWAA010606';
+}
+</script>
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <div id="logo"></div>
+    </div>
+    <div id="main">
+      <div id="applicationHeader">
+        <p class="screenName">WAA0106シミュレーション単体　新リンクパラメータ</p>
+      </div>
+      <div id="selectArea"></div>
+      <form id='form' name='form' method="post" target="blank"
+        action="https://c-web-test.cedyna.co.jp/st-customer/action/ssAA01/WAA0106Action/RWAA010606" />
+      <table class="applicationFooterTable">
+        <tr>
+            <td align="right">
+              <input type="submit" type="button" class="largeButton bt_blue" value="ローカル環境へ" onclick="actionLocal();">
+              <input type="submit" type="button" class="largeButton bt_blue" value="打鍵環境851へ" onclick="actionDaken851();">
+              <input type="submit" type="button" class="largeButton bt_blue" value="打鍵環境852へ" onclick="actionDaken852();">
+              <input type="submit" type="button" class="largeButton bt_blue" value="プレ本番環境へ" onclick="actionPreHmbn();">
+              <input type="submit" type="button" class="largeButton bt_blue" value="新ST環境へ" onclick="actionNewSt();">
+              <input type="submit" type="button" class="largeButton bt_blue" value="新テスト環境（ST2）へ" onclick="actionNewSt2();">
+            </td>
+        </tr>
+      </table>
+      <p class="tableTitle">インターフェースバージョン</p>
+      <table class="applicationContentsTable">
+        <tr>
+          <th>
+            バージョン
+            <span class="requiredMark oneLeftSpace">【必須】</span>
+          </th>
+          <td>
+            <input name="version" value="01" type="text"
+              size="45"></td>
+        </tr>
+      </table>
+      <p class="tableTitle">マスタ情報</p>
+      <table class="applicationContentsTable">
+        <tr>
+          <th>
+            ライン識別区分
+            <span class="requiredMark oneLeftSpace">【必須】</span>
+          </th>
+          <td>
+            <input name="lineSkbtKbn" value="0" type="text"
+              size="45"></td>
+        </tr>
+        <tr>
+          <th>
+            加盟店番号
+            <span class="requiredMark oneLeftSpace">【必須】</span>
+          </th>
+          <td>
+            <input name="kameitenNo" value="160437" type="text"
+              size="45"></td>
+        </tr>
+        <tr>
+          <th>
+            販売店番号
+            <span class="requiredMark oneLeftSpace">【必須】</span>
+          </th>
+          <td>
+            <input name="hanbaitenNo" value="000000"
+              type="text" size="45"></td>
+        </tr>
+        <tr>
+          <th>
+            取扱商品コード
+            <span class="requiredMark oneLeftSpace">【必須】</span>
+          </th>
+          <td>
+            <input name="toriatsukaiShohinCd" value="010"
+              type="text" size="45"></td>
+        </tr>
+        <tr>
+          <th>
+            取引条件コード
+            <p>
+              <span class="requiredMark">
+                ※以下のいずれか必須。
+                <br>
+                ・取引条件コード
+                <br>
+                ・ボーナス1回払い取引条件コード
+                <br>・ボーナス2回払い取引条件コード</span>
+            </p>
+          </th>
+          <td>
+            <input name="torihikiJokenCd" value="000"
+              type="text" size="45"></td>
+        </tr>
+        <tr>
+          <th>ボーナス1回払い取引条件コード</th>
+          <td>
+            <input name="torihikiJokenCdBonus1" value="100"
+              type="text" size="45"></td>
+        </tr>
+        <tr>
+          <th>ボーナス2回払い取引条件コード</th>
+          <td>
+            <input name="torihikiJokenCdBonus2" value="200"
+              type="text" size="45"></td>
+        </tr>
+        <tr>
+          <th>提携先番号</th>
+          <td>
+            <input name="teikeisakiNo" value="026320"
+              type="text" size="45"></td>
+        </tr>
+      </table>
+      <p class="tableTitle">シミュレーション情報</p>
+      <table class="applicationContentsTable">
+        <tr>
+          <th>クレジット申込金額</th>
+          <td>
+            <input name="creEntryKingaku" value="16000000"
+              type="text" size="45"></td>
+        </tr>
+        <tr>
+          <th>実質年率</th>
+          <td>
+            <input name="jissitsuNenritsu" value="4.9"
+              type="text" size="45"></td>
+        </tr>
+      </table>
+    </div>
+    <div id="footer">
+      <p class="copyright">
+        Copyright &copy; 2013 Cedyna Financial
+        Corp. All rights reserved.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
